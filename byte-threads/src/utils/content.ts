@@ -3,11 +3,11 @@ import { strings } from '@/content/strings';
 // Utility function to get nested string values safely
 export function getString(path: string): string {
   const keys = path.split('.');
-  let current: any = strings;
+  let current: unknown = strings;
 
   for (const key of keys) {
     if (current && typeof current === 'object' && key in current) {
-      current = current[key];
+      current = (current as Record<string, unknown>)[key];
     } else {
       console.warn(`String not found for path: ${path}`);
       return `[Missing: ${path}]`;
