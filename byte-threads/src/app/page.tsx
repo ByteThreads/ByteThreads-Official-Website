@@ -1,6 +1,7 @@
 import { strings } from '@/utils/content';
 import TypingEffect from '@/components/ui/TypingEffect';
 import ProductShowcase from '@/components/ui/ProductShowcase';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -160,12 +161,12 @@ export default function Home() {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Quick Links</h4>
               <nav className="flex flex-col space-y-2">
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
                   Home
-                </a>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
                 <a href="https://www.smartpropertycheck.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   Smart Property Check
                 </a>
