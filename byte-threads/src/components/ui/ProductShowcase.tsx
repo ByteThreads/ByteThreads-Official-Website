@@ -173,7 +173,10 @@ export default function ProductShowcase({
 
               <div className="relative z-10">
                 <div className="w-20 h-20 mb-6 text-[#5E80FF] group-hover:text-[#8C5EFF] filter drop-shadow-2xl transition-colors duration-500">
-                  {iconMap[features[0]?.icon] ? iconMap[features[0]?.icon]({}) : null}
+                  {(() => {
+                    const IconComponent = iconMap[features[0]?.icon];
+                    return IconComponent ? <IconComponent /> : null;
+                  })()}
                 </div>
                 <h3 className="text-4xl font-bold text-white mb-4 group-hover:text-[#8C5EFF] transition-colors">
                   {features[0]?.title}
