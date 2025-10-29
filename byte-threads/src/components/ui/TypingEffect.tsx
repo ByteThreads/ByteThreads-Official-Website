@@ -23,22 +23,16 @@ export default function TypingEffect({
   const [showCursorBlink, setShowCursorBlink] = useState(true);
 
   useEffect(() => {
-    // Start delay before typing begins
-    const startTimeout = setTimeout(() => {
-      if (currentIndex < text.length) {
-        const timeout = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
-          setCurrentIndex(currentIndex + 1);
-        }, speed);
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(text.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, currentIndex === 0 ? startDelay : speed);
 
-        return () => clearTimeout(timeout);
-      } else if (!isComplete) {
-        setIsComplete(true);
-        // Keep cursor visible after completion
-      }
-    }, currentIndex === 0 ? startDelay : 0);
-
-    return () => clearTimeout(startTimeout);
+      return () => clearTimeout(timeout);
+    } else if (!isComplete) {
+      setIsComplete(true);
+    }
   }, [currentIndex, text, speed, startDelay, isComplete]);
 
   // Cursor blink effect

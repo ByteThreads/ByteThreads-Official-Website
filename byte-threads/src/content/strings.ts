@@ -83,6 +83,81 @@ export const strings = {
     ],
   },
 
+  // Product Showcase - Smart Property Check
+  product: {
+    title: "Smart Property Check",
+    tagline: "The First Property Inspection App with AI Video Analysis",
+    description: "AI-powered iOS property inspection app that automatically detects issues, transcribes findings, and generates professional reports in seconds. Save 30-50% inspection time.",
+    features: [
+      {
+        icon: "📱",
+        title: "AI Video Analysis",
+        description: "Automatically detects property issues from video. The only iOS app with breakthrough AI video technology that saves 30-50% of inspection time.",
+      },
+      {
+        icon: "🤖",
+        title: "Voice-to-Text Transcription",
+        description: "Speak your findings and watch them automatically transcribe. Eliminates manual report writing and speeds up your workflow.",
+      },
+      {
+        icon: "📊",
+        title: "AI Report Generation",
+        description: "Creates professional inspection reports in just 30 seconds. AI generates detailed narratives from your notes and videos automatically.",
+      },
+      {
+        icon: "🔔",
+        title: "Native iOS Performance",
+        description: "Built with SwiftUI for blazing-fast performance. Fully offline functionality with iCloud sync when you're back online.",
+      },
+      {
+        icon: "🔒",
+        title: "Digital Signatures & PDF Export",
+        description: "Capture client signatures digitally and export professional PDF reports instantly. Everything you need in one app.",
+      },
+      {
+        icon: "🌐",
+        title: "Unlimited Media Storage",
+        description: "Take unlimited photos and videos during inspections. All stored securely and synced automatically with iCloud.",
+      },
+    ],
+    cta: {
+      text: "Learn More",
+      link: "https://www.smartpropertycheck.com",
+    },
+  },
+
+  // FAQ section
+  faq: {
+    title: "Frequently Asked Questions",
+    subtitle: "Everything you need to know about Smart Property Check",
+    items: [
+      {
+        question: "What is Smart Property Check?",
+        answer: "Smart Property Check is a comprehensive property management platform that streamlines inspections, maintenance workflows, and reporting. It uses AI-powered insights to help property managers make data-driven decisions."
+      },
+      {
+        question: "How does the AI-powered inspection work?",
+        answer: "Our AI analyzes photos and data from property inspections to automatically detect issues, predict maintenance needs, and suggest optimal maintenance schedules. This saves time and helps prevent costly repairs."
+      },
+      {
+        question: "Can I use Smart Property Check offline?",
+        answer: "Yes! Our mobile app works completely offline, allowing you to conduct inspections in areas without internet connectivity. All data automatically syncs once you're back online."
+      },
+      {
+        question: "What types of properties can I manage?",
+        answer: "Smart Property Check works with residential, commercial, and industrial properties. Our platform is flexible and can be customized to meet the specific needs of your property portfolio."
+      },
+      {
+        question: "How secure is my data?",
+        answer: "We use bank-level encryption and comply with industry standards including SOC 2 and GDPR. All data is encrypted in transit and at rest, with regular security audits."
+      },
+      {
+        question: "Do you offer training and support?",
+        answer: "Absolutely! We provide comprehensive onboarding, training sessions, and 24/7 customer support. Our team is here to ensure you get the most out of Smart Property Check."
+      }
+    ]
+  },
+
   // Contact page
   contact: {
     title: "Get in Touch",
