@@ -67,7 +67,7 @@ interface ProductShowcaseProps {
   title: string;
   tagline: string;
   description: string;
-  features: Feature[];
+  features: readonly Feature[];
   ctaText: string;
   ctaLink: string;
 }
