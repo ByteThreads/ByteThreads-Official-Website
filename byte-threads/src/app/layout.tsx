@@ -23,9 +23,31 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+const baseUrl = "https://bytethreadsllc.com";
+
 export const metadata: Metadata = {
-  title: strings.site.title,
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: strings.site.title,
+    template: "%s | ByteThreads",
+  },
   description: strings.site.description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "ByteThreads",
+    title: strings.site.title,
+    description: strings.site.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: strings.site.title,
+    description: strings.site.description,
+  },
+  alternates: {
+    canonical: baseUrl,
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +63,31 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "ByteThreads LLC",
+              url: baseUrl,
+              description: strings.site.description,
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "MN",
+                addressCountry: "US",
+              },
+              email: "contact@bytethreadsllc.com",
+              areaServed: "US",
+              serviceType: [
+                ".NET Development",
+                "iOS App Development",
+                "Full-Stack Web Development",
+                "AI & Automation",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
