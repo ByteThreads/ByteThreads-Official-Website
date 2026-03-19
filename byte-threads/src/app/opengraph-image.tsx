@@ -109,7 +109,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: '14px',
-              color: 'rgba(240, 237, 232, 0.3)',
+              color: '#C8956C',
               fontFamily: 'sans-serif',
             }}
           >
