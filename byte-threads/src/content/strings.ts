@@ -221,7 +221,6 @@ export const strings = {
       work: "Work",
       about: "About",
       process: "Process",
-      contact: "Contact",
     },
     external: {
       openStudioFlow: {
