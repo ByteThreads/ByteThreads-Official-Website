@@ -2,8 +2,8 @@
 
 ## Manual Steps
 
-- [ ] **Google Search Console** — Verify ownership of bytethreadsllc.com and submit sitemap at https://search.google.com/search-console
+- [x] **Google Search Console** — Verified and sitemap submitted
 - [ ] **OG preview image** — Create a 1200x630 image for social sharing (logo + tagline on dark background). Save to `byte-threads/public/og-image.png`, then add `images` field to the openGraph config in `layout.tsx`
-- [ ] **Google Business Profile** — Set up at https://business.google.com for local SEO ("software developer Minnesota")
+- [x] **Google Business Profile** — Set up, pending verification (up to 5 days)
 - [ ] **Bing Webmaster Tools** — Submit sitemap at https://www.bing.com/webmasters (optional but easy)
-- [ ] **Favicon check** — Verify favicon displays correctly across browsers (currently using `icon.png` in app directory)
+- [x] **Favicon check** — Displays correctly
