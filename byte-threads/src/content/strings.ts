@@ -2,8 +2,9 @@
 export const strings = {
   // Site metadata
   site: {
-    title: "ByteThreads - Official Website",
-    description: "Welcome to ByteThreads - Your digital solutions partner",
+    title: "ByteThreads — Software, Crafted.",
+    description:
+      "ByteThreads LLC is a boutique software development studio specializing in .NET, iOS, and full-stack web development. Precision engineering woven into every line of code.",
   },
 
   // Header/Navigation
@@ -11,169 +12,193 @@ export const strings = {
     logoAlt: "ByteThreads",
     brandName: "ByteThreads",
     nav: {
-      home: "Home",
-      about: "About",
       services: "Services",
-      portfolio: "Portfolio",
+      work: "Work",
+      about: "About",
+      process: "Process",
       contact: "Contact",
     },
   },
 
   // Hero section
   hero: {
-    mainHeading: "Today's dreams, Tomorrow's reality",
-    subHeading: "Crafting digital solutions one moment at a time",
-    ctaButton: "Get Started",
-    videoFallback: "Your browser does not support the video tag.",
+    headline: "Software, crafted.",
+    description:
+      "ByteThreads is a boutique development studio that weaves precision engineering into .NET backends, native iOS apps, and modern web experiences.",
+    cta: "Start a Conversation",
   },
 
-  // Page sections
-  sections: {
-    threads: [
-      {
-        title: "Innovation",
-        description: "Pioneering cutting-edge solutions that push the boundaries of what's possible in digital technology.",
-      },
-      {
-        title: "Collaboration",
-        description: "Working together to weave your vision into reality, creating seamless connections between ideas and execution.",
-      },
-      {
-        title: "Excellence",
-        description: "Delivering exceptional quality in every thread of code, design, and strategy that we craft.",
-      },
-      {
-        title: "Growth",
-        description: "Empowering your business to scale and evolve through powerful digital experiences.",
-      },
-    ],
-    gallery: {
-      heading: "Digital Solutions",
-      description: "Transforming ideas into powerful digital experiences",
-    },
-    moreContent: {
-      heading: "More Content",
-      description: "Keep scrolling to test the floating header behavior.",
-    },
-    features: [
-      {
-        id: "exclusive",
-        letter: "B",
-        title: "Exclusive Approach",
-        description: "Each project is like a unique work of art, and we immerse ourselves in your vision to achieve a truly exceptional result.",
-      },
-      {
-        id: "unique",
-        letter: "Y",
-        title: "Unique Style",
-        description: "We give each project a unique look that reflects your brand's personality. Our goal is to create an eye-catching visual experience that will help you stand out from the crowd.",
-      },
-      {
-        id: "comprehensive",
-        letter: "T",
-        title: "Comprehensive Development",
-        description: "Everything is turnkey — from the idea to launch. We handle every stage of the process so that you receive a fully finished product.",
-      },
-      {
-        id: "competitive",
-        letter: "E",
-        title: "Competitive Analysis",
-        description: "We analyze the strengths and weaknesses of your competitors, identify current trends, and offer solutions that will make your project stand out and give you a competitive advantage.",
-      },
-    ],
-  },
-
-  // Product Showcase - Smart Property Check
-  product: {
-    title: "Smart Property Check",
-    tagline: "The First Property Inspection App with AI Video Analysis",
-    description: "AI-powered iOS property inspection app that automatically detects issues, transcribes findings, and generates professional reports in seconds. Save 30-50% inspection time.",
-    features: [
-      {
-        icon: "📱",
-        title: "AI Video Analysis",
-        description: "Automatically detects property issues from video. The only iOS app with breakthrough AI video technology that saves 30-50% of inspection time.",
-      },
-      {
-        icon: "🤖",
-        title: "Voice-to-Text Transcription",
-        description: "Speak your findings and watch them automatically transcribe. Eliminates manual report writing and speeds up your workflow.",
-      },
-      {
-        icon: "📊",
-        title: "AI Report Generation",
-        description: "Creates professional inspection reports in just 30 seconds. AI generates detailed narratives from your notes and videos automatically.",
-      },
-      {
-        icon: "🔔",
-        title: "Native iOS Performance",
-        description: "Built with SwiftUI for blazing-fast performance. Fully offline functionality with iCloud sync when you're back online.",
-      },
-      {
-        icon: "🔒",
-        title: "Digital Signatures & PDF Export",
-        description: "Capture client signatures digitally and export professional PDF reports instantly. Everything you need in one app.",
-      },
-      {
-        icon: "🌐",
-        title: "Unlimited Media Storage",
-        description: "Take unlimited photos and videos during inspections. All stored securely and synced automatically with iCloud.",
-      },
-    ],
-    cta: {
-      text: "Learn More",
-      link: "https://www.smartpropertycheck.com",
-    },
-  },
-
-  // FAQ section
-  faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Everything you need to know about Smart Property Check",
+  // Services section
+  services: {
+    label: "What I Do",
+    headline: "Four pillars of engineering excellence",
     items: [
       {
-        question: "What is Smart Property Check?",
-        answer: "Smart Property Check is a comprehensive property management platform that streamlines inspections, maintenance workflows, and reporting. It uses AI-powered insights to help property managers make data-driven decisions."
+        title: ".NET & Backend",
+        description:
+          "Enterprise APIs, microservices, and cloud-native architectures built on the Microsoft stack. Scalable, secure, production-hardened.",
+        icon: "dotnet",
       },
       {
-        question: "How does the AI-powered inspection work?",
-        answer: "Our AI analyzes photos and data from property inspections to automatically detect issues, predict maintenance needs, and suggest optimal maintenance schedules. This saves time and helps prevent costly repairs."
+        title: "iOS Apps",
+        description:
+          "Native Swift and SwiftUI applications designed for performance and delight. From concept through App Store launch.",
+        icon: "ios",
       },
       {
-        question: "Can I use Smart Property Check offline?",
-        answer: "Yes! Our mobile app works completely offline, allowing you to conduct inspections in areas without internet connectivity. All data automatically syncs once you're back online."
+        title: "Full-Stack Web",
+        description:
+          "Modern web applications with React, Next.js, SvelteKit, and Tailwind. Responsive, accessible, and fast.",
+        icon: "web",
       },
       {
-        question: "What types of properties can I manage?",
-        answer: "Smart Property Check works with residential, commercial, and industrial properties. Our platform is flexible and can be customized to meet the specific needs of your property portfolio."
+        title: "AI & Automation",
+        description:
+          "Intelligent features powered by machine learning, from computer vision to natural language processing and workflow automation.",
+        icon: "ai",
+      },
+    ],
+  },
+
+  // About section
+  about: {
+    label: "The Studio",
+    headline: "A studio, not a factory.",
+    philosophy:
+      "I started ByteThreads because I believe great software comes from focused, dedicated craft, not assembly lines. Every project gets my full attention, and you work directly with the engineer building your product. No hand-offs, no layers of abstraction.",
+    differentiators: [
+      {
+        title: "Direct Engineer Access",
+        description:
+          "You work directly with the person building your product. No project managers translating your vision through three layers of abstraction.",
       },
       {
-        question: "How secure is my data?",
-        answer: "We use bank-level encryption and comply with industry standards including SOC 2 and GDPR. All data is encrypted in transit and at rest, with regular security audits."
+        title: "Boutique Advantage",
+        description:
+          "Small enough to be nimble, experienced enough to be reliable. Fewer projects means each one gets the attention it deserves.",
       },
       {
-        question: "Do you offer training and support?",
-        answer: "Absolutely! We provide comprehensive onboarding, training sessions, and 24/7 customer support. Our team is here to ensure you get the most out of Smart Property Check."
-      }
-    ]
+        title: "Full Lifecycle",
+        description:
+          "From architecture and design through deployment and ongoing support. I don\u2019t disappear after launch. I\u2019m invested in your success.",
+      },
+    ],
+  },
+
+  // Work / Portfolio section
+  work: {
+    label: "What I\u2019ve Built",
+    headline: "Projects that speak for themselves",
+    projects: [
+      {
+        name: "Open Studio Flow",
+        description:
+          "All-in-one project management platform for interior designers and architects. Milestone tracking, client collaboration, budget management, and a native iOS companion app.",
+        techStack: ["SvelteKit", "Supabase", "Swift", "PostgreSQL", "Stripe"],
+        link: "https://openstudioflow.com",
+        linkLabel: "Visit Open Studio Flow",
+      },
+      {
+        name: "Smart Property Check",
+        description:
+          "AI-powered iOS property inspection app with breakthrough video analysis. Automatically detects issues, transcribes findings, and generates professional reports in seconds.",
+        techStack: ["SwiftUI", "Core ML", "Vision", "CloudKit", "PDFKit"],
+        link: "https://www.smartpropertycheck.com",
+        linkLabel: "Visit Smart Property Check",
+      },
+    ],
+  },
+
+  // Process section
+  process: {
+    label: "How I Work",
+    headline: "From first conversation to long-term partnership",
+    steps: [
+      {
+        number: "01",
+        title: "Discovery",
+        description:
+          "Listening comes before building. A deep-dive into your goals, users, and constraints to define the right scope.",
+      },
+      {
+        number: "02",
+        title: "Design",
+        description:
+          "Architecture, wireframes, and technical planning. You see the blueprint before a single line of code is written.",
+      },
+      {
+        number: "03",
+        title: "Build",
+        description:
+          "Iterative development with regular demos. You\u2019re never in the dark about progress or direction.",
+      },
+      {
+        number: "04",
+        title: "Launch",
+        description:
+          "Rigorous testing, performance tuning, and deployment. Every detail is sweated so your users don\u2019t have to.",
+      },
+      {
+        number: "05",
+        title: "Support",
+        description:
+          "Ongoing maintenance, monitoring, and iteration. Your product evolves as your business grows.",
+      },
+    ],
+  },
+
+  // Tech stack section
+  techStack: {
+    label: "The Toolkit",
+    headline: "Technologies I trust",
+    items: [
+      ".NET",
+      "C#",
+      "ASP.NET Core",
+      "Swift",
+      "SwiftUI",
+      "Core ML",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "SvelteKit",
+      "Tailwind CSS",
+      "Node.js",
+      "PostgreSQL",
+      "Supabase",
+      "Azure",
+      "Docker",
+      "GraphQL",
+      "REST APIs",
+    ],
+  },
+
+  // CTA section
+  cta: {
+    headline: "Ready to build something?",
+    description:
+      "Tell me about your project. I\u2019ll get back to you within one business day.",
+    button: "Start a Conversation",
   },
 
   // Contact page
   contact: {
-    title: "Get in Touch",
-    subtitle: "Have a project in mind? Let's talk about how we can help bring your ideas to life.",
+    title: "Let\u2019s Talk",
+    subtitle:
+      "Have a project in mind? Tell me about it and I\u2019ll get back to you within one business day.",
     form: {
       nameLabel: "Name",
       namePlaceholder: "Your name",
       emailLabel: "Email",
       emailPlaceholder: "your@email.com",
       subjectLabel: "Subject",
-      subjectPlaceholder: "How can we help?",
+      subjectPlaceholder: "What can I help with?",
       messageLabel: "Message",
-      messagePlaceholder: "Tell us about your project...",
+      messagePlaceholder: "Tell me about your project...",
       submitButton: "Send Message",
       submitting: "Sending...",
-      successMessage: "Message sent successfully! We'll get back to you soon.",
+      successMessage:
+        "Message sent successfully! I\u2019ll get back to you soon.",
       errorMessage: "Failed to send message. Please try again.",
     },
     info: {
@@ -188,12 +213,31 @@ export const strings = {
     },
   },
 
-  // Status messages
-  status: {
-    projectCreated: "✅ Project structure created",
-    headerEffect: "✅ Floating header with scroll effect",
-    videoBackground: "✅ Video background hero section",
-    stringsImplemented: "✅ Centralized string management",
+  // Footer
+  footer: {
+    tagline: "Software, crafted with care.",
+    nav: {
+      services: "Services",
+      work: "Work",
+      about: "About",
+      process: "Process",
+      contact: "Contact",
+    },
+    external: {
+      openStudioFlow: {
+        label: "Open Studio Flow",
+        link: "https://openstudioflow.com",
+      },
+      smartPropertyCheck: {
+        label: "Smart Property Check",
+        link: "https://www.smartpropertycheck.com",
+      },
+    },
+    contact: {
+      email: "contact@bytethreadsllc.com",
+      location: "Minnesota, USA",
+    },
+    copyright: "ByteThreads LLC. All rights reserved.",
   },
 } as const;
 

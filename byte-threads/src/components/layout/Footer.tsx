@@ -1,92 +1,104 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { strings } from '@/utils/content';
+
 export default function Footer() {
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <footer className="bg-black text-stone-100 py-16">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
+    <footer className="bg-navy border-t border-foreground/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-stone-50 mb-4">ByteThreads</h3>
-            <p className="text-stone-300 leading-relaxed">
-              Crafting digital solutions one moment at a time.
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logos/logo.svg"
+                alt={strings.header.logoAlt}
+                width={120}
+                height={24}
+                className="h-8 w-auto"
+              />
+              <span className="font-serif text-lg text-foreground">ByteThreads</span>
+            </div>
+            <p className="text-foreground/60 text-sm leading-relaxed">
+              {strings.footer.tagline}
             </p>
           </div>
 
-          {/* Services */}
+          {/* Navigation */}
           <div>
-            <h4 className="text-lg font-semibold text-stone-50 mb-4">Services</h4>
+            <h4 className="text-xs font-mono text-copper uppercase tracking-[0.2em] mb-4">
+              Navigate
+            </h4>
             <ul className="space-y-2">
+              {Object.entries(strings.footer.nav).map(([key, label]) => (
+                <li key={key}>
+                  <button
+                    onClick={() => handleNavClick(`#${key}`)}
+                    className="text-sm text-foreground/70 hover:text-copper transition-colors"
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
               <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Web Development
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Mobile Apps
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  UI/UX Design
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Consulting
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold text-stone-50 mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Our Team
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-sm text-foreground/70 hover:text-copper transition-colors"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Contact & Projects */}
           <div>
-            <h4 className="text-lg font-semibold text-stone-50 mb-4">Connect</h4>
+            <h4 className="text-xs font-mono text-copper uppercase tracking-[0.2em] mb-4">
+              Get In Touch
+            </h4>
+            <div className="space-y-2 mb-6">
+              <a
+                href={`mailto:${strings.footer.contact.email}`}
+                className="block text-sm text-foreground/70 hover:text-copper transition-colors"
+              >
+                {strings.footer.contact.email}
+              </a>
+              <p className="text-sm text-foreground/60">{strings.footer.contact.location}</p>
+            </div>
+
+            <h4 className="text-xs font-mono text-copper uppercase tracking-[0.2em] mb-4">
+              Projects
+            </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Twitter
+                <a
+                  href={strings.footer.external.openStudioFlow.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-foreground/70 hover:text-copper transition-colors"
+                >
+                  {strings.footer.external.openStudioFlow.label} &rarr;
                 </a>
               </li>
               <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-stone-300 hover:text-stone-50 transition-colors">
-                  Instagram
+                <a
+                  href={strings.footer.external.smartPropertyCheck.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-foreground/70 hover:text-copper transition-colors"
+                >
+                  {strings.footer.external.smartPropertyCheck.label} &rarr;
                 </a>
               </li>
             </ul>
@@ -94,16 +106,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-stone-800 pt-8">
+        <div className="mt-12 pt-8 border-t border-foreground/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-stone-400 text-sm">
-              © {new Date().getFullYear()} ByteThreads. All rights reserved.
+            <p className="text-foreground/50 text-xs">
+              &copy; {new Date().getFullYear()} {strings.footer.copyright}
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-stone-400 hover:text-stone-50 text-sm transition-colors">
+              <a href="#" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-stone-400 hover:text-stone-50 text-sm transition-colors">
+              <a href="#" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
                 Terms of Service
               </a>
             </div>

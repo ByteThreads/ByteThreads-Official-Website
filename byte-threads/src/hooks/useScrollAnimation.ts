@@ -26,10 +26,24 @@ export const slideInRight: Variants = {
   visible: { opacity: 1, x: 0 }
 };
 
-export function useScrollAnimation() {
+export const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+export const staggerItem: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 }
+};
+
+export function useScrollAnimation(margin: string = '-100px') {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  const inView = useInView(ref, { once: true, margin: margin as `${number}px` });
 
   useEffect(() => {
     if (inView) {
