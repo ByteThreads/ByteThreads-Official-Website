@@ -6,11 +6,12 @@ import { strings } from '@/utils/content';
 import CaseStudyCard from '@/components/ui/CaseStudyCard';
 import AnimatedDashboard from '@/components/ui/AnimatedDashboard';
 import AnimatedWorkflow from '@/components/ui/AnimatedWorkflow';
+import AnimatedShowly from '@/components/ui/AnimatedShowly';
 
 export default function WorkSection() {
   const { ref, controls } = useScrollAnimation();
 
-  const mockups = [<AnimatedDashboard key="osf" />, <AnimatedWorkflow key="spc" />];
+  const mockups = [<AnimatedDashboard key="osf" />, <AnimatedWorkflow key="spc" />, <AnimatedShowly key="showly" />];
 
   return (
     <section id="work" className="py-32 px-4 relative bg-navy-light/30">

@@ -101,6 +101,16 @@ export default function Footer() {
                   {strings.footer.external.smartPropertyCheck.label} &rarr;
                 </a>
               </li>
+              <li>
+                <a
+                  href={strings.footer.external.showly.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-foreground/70 hover:text-copper transition-colors"
+                >
+                  {strings.footer.external.showly.label} &rarr;
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -112,12 +122,12 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {strings.footer.copyright}
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
+              <Link href="/privacy" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
+              </Link>
+              <Link href="/terms" className="text-foreground/50 hover:text-foreground/70 text-xs transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

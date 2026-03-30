@@ -106,6 +106,14 @@ export const strings = {
         link: "https://www.smartpropertycheck.com",
         linkLabel: "Visit Smart Property Check",
       },
+      {
+        name: "Showly",
+        description:
+          "Real estate showing scheduler that replaces back-and-forth with instant booking links. Automated feedback collection, showing reports for sellers, QR codes for yard signs, and SMS reminders.",
+        techStack: ["Next.js", "React", "TypeScript", "Firebase", "Stripe", "Twilio"],
+        link: "https://www.showly.io",
+        linkLabel: "Visit Showly",
+      },
     ],
   },
 
@@ -230,6 +238,10 @@ export const strings = {
       smartPropertyCheck: {
         label: "Smart Property Check",
         link: "https://www.smartpropertycheck.com",
+      },
+      showly: {
+        label: "Showly",
+        link: "https://www.showly.io",
       },
     },
     contact: {
