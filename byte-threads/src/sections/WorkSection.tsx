@@ -12,6 +12,8 @@ export default function WorkSection() {
   const { ref, controls } = useScrollAnimation();
 
   const mockups = [<AnimatedDashboard key="osf" />, <AnimatedWorkflow key="spc" />, <AnimatedShowly key="showly" />];
+  // Indexed to match strings.work.projects
+  const caseStudyLinks = ['/work/open-studio-flow', '/work/smart-property-check', '/work/showly'];
 
   return (
     <section id="work" className="py-32 px-4 relative bg-navy-light/30">
@@ -50,6 +52,7 @@ export default function WorkSection() {
                 linkLabel={project.linkLabel}
                 mockup={mockups[i]}
                 reversed={i % 2 !== 0}
+                caseStudyHref={caseStudyLinks[i]}
               />
             ))}
           </div>

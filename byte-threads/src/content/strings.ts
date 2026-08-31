@@ -93,24 +93,24 @@ export const strings = {
       {
         name: "Open Studio Flow",
         description:
-          "All-in-one project management platform for interior designers and architects. Milestone tracking, client collaboration, budget management, and a native iOS companion app.",
-        techStack: ["SvelteKit", "Supabase", "Swift", "PostgreSQL", "Stripe"],
+          "All-in-one project management platform for interior designers, architects, landscape designers, and design studios. Client approvals, budget tracking, FF&E selections, AI-transcribed voice notes, and a native iOS companion app — with free access for clients and contractors.",
+        techStack: ["SvelteKit", "Supabase", "Cloudflare", "Swift", "Stripe"],
         link: "https://openstudioflow.com",
         linkLabel: "Visit Open Studio Flow",
       },
       {
         name: "Smart Property Check",
         description:
-          "AI-powered iOS property inspection app with breakthrough video analysis. Automatically detects issues, transcribes findings, and generates professional reports in seconds.",
-        techStack: ["SwiftUI", "Core ML", "Vision", "CloudKit", "PDFKit"],
+          "AI-powered iOS inspection app for property managers, inspectors, and landlords. Record a video walkthrough, let AI detect issues and draft the report, then sign and export a branded PDF — offline-capable, with iCloud sync across iPhone and iPad.",
+        techStack: ["SwiftUI", "CloudKit", "StoreKit 2", "OpenAI", "AssemblyAI"],
         link: "https://www.smartpropertycheck.com",
         linkLabel: "Visit Smart Property Check",
       },
       {
         name: "Showly",
         description:
-          "Real estate showing scheduler that replaces back-and-forth with instant booking links. Automated feedback collection, showing reports for sellers, QR codes for yard signs, and SMS reminders.",
-        techStack: ["Next.js", "React", "TypeScript", "Firebase", "Stripe", "Twilio"],
+          "Showing platform for real estate agents: instant booking links replace phone tag, buyers leave structured feedback after every showing, and sellers follow along on a live owner report. Web dashboard plus a native iOS app, for solo agents through 25-agent brokerages.",
+        techStack: ["Next.js", "Firebase", "SwiftUI", "Stripe", "Twilio"],
         link: "https://www.showly.io",
         linkLabel: "Visit Showly",
       },

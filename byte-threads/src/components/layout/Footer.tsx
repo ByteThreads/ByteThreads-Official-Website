@@ -5,15 +5,6 @@ import Image from 'next/image';
 import { strings } from '@/utils/content';
 
 export default function Footer() {
-  const handleNavClick = (href: string) => {
-    if (href.startsWith('#')) {
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <footer className="bg-navy border-t border-foreground/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -43,12 +34,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {Object.entries(strings.footer.nav).map(([key, label]) => (
                 <li key={key}>
-                  <button
-                    onClick={() => handleNavClick(`#${key}`)}
+                  <Link
+                    href={`/#${key}`}
                     className="text-sm text-foreground/70 hover:text-copper transition-colors"
                   >
                     {label}
-                  </button>
+                  </Link>
                 </li>
               ))}
               <li>

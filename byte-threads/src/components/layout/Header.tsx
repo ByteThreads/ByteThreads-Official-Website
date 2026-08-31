@@ -7,10 +7,10 @@ import { motion } from 'framer-motion';
 import { strings } from '@/utils/content';
 
 const navItems = [
-  { label: strings.header.nav.services, href: '#services' },
-  { label: strings.header.nav.work, href: '#work' },
-  { label: strings.header.nav.about, href: '#about' },
-  { label: strings.header.nav.process, href: '#process' },
+  { label: strings.header.nav.services, href: '/#services' },
+  { label: strings.header.nav.work, href: '/#work' },
+  { label: strings.header.nav.about, href: '/#about' },
+  { label: strings.header.nav.process, href: '/#process' },
 ];
 
 export default function Header() {
@@ -24,16 +24,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleNavClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-    if (href.startsWith('#')) {
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <motion.header
@@ -66,13 +56,13 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => handleNavClick(item.href)}
+                href={item.href}
                 className="px-4 py-2 text-sm text-foreground/60 hover:text-copper transition-colors duration-300"
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
             <Link
               href="/contact"
@@ -113,13 +103,14 @@ export default function Header() {
         >
           <nav className="px-2 py-6 space-y-1 bg-navy-light/90 backdrop-blur-xl rounded-xl mb-4 border border-foreground/5">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => handleNavClick(item.href)}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left py-3 px-4 text-foreground/70 hover:text-copper hover:bg-foreground/5 rounded-lg transition-colors"
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
             <Link
               href="/contact"

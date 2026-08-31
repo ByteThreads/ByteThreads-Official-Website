@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { staggerItem } from '@/hooks/useScrollAnimation';
 
@@ -11,6 +12,7 @@ interface CaseStudyCardProps {
   linkLabel: string;
   mockup: React.ReactNode;
   reversed?: boolean;
+  caseStudyHref?: string;
 }
 
 export default function CaseStudyCard({
@@ -21,6 +23,7 @@ export default function CaseStudyCard({
   linkLabel,
   mockup,
   reversed = false,
+  caseStudyHref,
 }: CaseStudyCardProps) {
   return (
     <motion.div
@@ -50,22 +53,44 @@ export default function CaseStudyCard({
           ))}
         </div>
 
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-copper hover:text-copper-light transition-colors group"
-        >
-          {linkLabel}
-          <svg
-            className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+          {caseStudyHref && (
+            <Link
+              href={caseStudyHref}
+              className="inline-flex items-center gap-2 text-sm text-copper hover:text-copper-light transition-colors group"
+            >
+              Read the case study
+              <svg
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          )}
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-2 text-sm transition-colors group ${
+              caseStudyHref
+                ? 'text-foreground/50 hover:text-foreground/80'
+                : 'text-copper hover:text-copper-light'
+            }`}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
+            {linkLabel}
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
       </div>
 
       {/* Mockup */}

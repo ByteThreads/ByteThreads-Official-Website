@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-ByteThreads LLC company website. Showcases the company and its flagship product, **Smart Property Check** (an iOS app). Built with Next.js App Router and deployed on Vercel.
+ByteThreads LLC company website. Showcases the studio and its products: **Open Studio Flow** (design project management SaaS), **Smart Property Check** (AI-powered iOS inspection app), and **Showly** (real estate showing platform). Built with Next.js App Router and deployed on Vercel.
 
 ## Company Profile
 
@@ -24,15 +24,20 @@ All source code lives inside `byte-threads/`:
 byte-threads/
 ├── src/
 │   ├── app/                  # Pages & API routes (App Router)
-│   │   ├── page.tsx          # Home — hero video, product showcase
-│   │   ├── layout.tsx        # Root layout (Header + children)
-│   │   ├── globals.css       # Tailwind imports, CSS vars, custom animations
-│   │   ├── contact/page.tsx  # Contact form with animated background
+│   │   ├── page.tsx          # Home — single-page composition of src/sections/
+│   │   ├── layout.tsx        # Root layout (fonts, metadata, Header, JSON-LD)
+│   │   ├── globals.css       # Tailwind imports, CSS vars (copper/sage/navy), animations
+│   │   ├── contact/page.tsx  # Contact form
+│   │   ├── work/                 # Product case-study pages (open-studio-flow, smart-property-check, showly)
+│   │   ├── privacy/ terms/   # Legal pages
+│   │   ├── sitemap.ts robots.ts opengraph-image.tsx  # SEO
 │   │   └── api/contact/route.ts  # POST endpoint — sends email via Resend
+│   ├── sections/             # Home page sections (Hero, Services, About, Work, Process, TechStack, CTA)
 │   ├── components/
 │   │   ├── layout/           # Header.tsx, Footer.tsx
-│   │   └── ui/               # ProductShowcase, TypingEffect, AnimatedNodesBackground, FAQ, etc.
+│   │   └── ui/               # CaseStudyCard, ProductCaseStudy, Animated* mockups, etc.
 │   ├── content/strings.ts    # Centralized copy/content strings
+│   ├── content/products.ts   # Case-study content for /work/<slug> product pages
 │   ├── hooks/                # useScrollAnimation (Framer Motion + IntersectionObserver)
 │   └── utils/content.ts      # String utility helpers
 ├── public/                   # Static assets (logos/, videos/, images/, icons/)
@@ -62,16 +67,15 @@ RESEND_API_KEY=<key>   # Required for contact form email delivery
 ## Key Conventions
 
 - **Path alias:** Import with `@/` (maps to `src/`). Example: `import { Header } from '@/components/layout/Header'`
-- **Styling:** Tailwind utility classes. Brand colors defined as CSS custom properties (`--accent-blue-*`) in `globals.css`. Dark mode via `prefers-color-scheme`.
-- **Animation:** Framer Motion for scroll-triggered and interactive animations. Canvas API for the animated nodes background on the contact page.
-- **Content:** Centralized in `src/content/strings.ts` — update copy there, not in component files.
+- **Styling:** Tailwind utility classes. Brand colors defined as CSS custom properties (`--copper-*`, `--sage-*`, `--navy-*`) in `globals.css`. Dark-only design. Fonts: DM Serif Display (headlines), DM Sans (body), JetBrains Mono (labels).
+- **Animation:** Framer Motion for scroll-triggered and interactive animations.
+- **Content:** Centralized in `src/content/strings.ts` (site-wide copy) and `src/content/products.ts` (product case-study pages) — update copy there, not in component files.
 - **Email:** Contact form POSTs to `/api/contact`, which sends via Resend from `noreply@bytethreadsllc.com` to `contact@bytethreadsllc.com`.
 
 ## Current State
 
-- **Live pages:** Home (`/`), Contact (`/contact`)
-- **Placeholder routes:** `/about`, `/blog`, `/portfolio`, `/services` (directories exist, no content yet)
-- **Unused components:** FAQ, FeaturesSection, ImageGallery, AnimatedThreads — built but not integrated into any page
+- **Live pages:** Home (`/`, single-page with anchor sections `#services #work #about #process`), Contact (`/contact`), product case studies (`/work/open-studio-flow`, `/work/smart-property-check`, `/work/showly`), legal (`/privacy`, `/terms`)
+- Product facts in `src/content/products.ts` mirror each product's live marketing site (openstudioflow.com, smartpropertycheck.com, showly.io) — keep them in sync when those products reposition. Smart Property Check's Team plan is unreleased: never market team/multi-user features for it.
 
 ## Deployment
 
